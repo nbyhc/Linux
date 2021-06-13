@@ -69,29 +69,3 @@ echo '启动mtg'
 systemctl daemon-reload
 systemctl enable mtg
 systemctl start mtg
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
