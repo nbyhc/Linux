@@ -10,9 +10,8 @@ echo '*MTProxy_go一键安装脚本 @ nbyhc*'
 echo '*v1.0               2021-06-12*'
 echo '*******************************'
 
-
-echo "使用端口(建议:443/2053/2083/2087/2096/8443)："
-read PORT_NO
+#输入需要使用的端口
+read -p "使用端口(建议:443/2053/2083/2087/2096/8443)：" PORT_NO
 
 echo '更新APT源/软件'
 apt update && apt upgrade -y
@@ -21,12 +20,11 @@ echo '安装git/wget'
 apt install git wget -y
 
 echo '安装Golang'
-#官网确认最新的文件名
+#这里需要去官网确认最新的go文件安装包的名字
 GO_FILE=go1.16.5.linux-amd64.tar.gz
 wget https://golang.org/dl/${GO_FILE}
 tar -C /usr/local -xzf ${GO_FILE}
 export PATH=$PATH:/usr/local/go/bin
-
 
 echo '安装mtg'
 git clone https://github.com/9seconds/mtg.git
@@ -56,7 +54,6 @@ RestartSec=3
 [Install]
 WantedBy=multi-user.target
 EOF
-
 
 #最简单：只需要配置密钥和端口便可以成功运行mtg。
 echo '配置mtg.toml'
