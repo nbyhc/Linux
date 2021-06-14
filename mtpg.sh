@@ -26,13 +26,11 @@ wget https://golang.org/dl/${GO_FILE}
 tar -C /usr/local -xzf ${GO_FILE}
 export PATH=$PATH:/usr/local/go/bin
 
-
 echo -e "\033[32m 安装mtg \033[0m"
 git clone https://github.com/9seconds/mtg.git
 cd mtg
 go build
 cp mtg /usr/local/bin
-
 
 #生成密钥（这将返回一个ee开头的密钥，ee表示支持Fake TLS，将生成的密钥保存好，一会儿需要填入toml配置文件中）
 echo -e "\033[32m 生成密钥 \033[0m"
