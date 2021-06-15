@@ -1,6 +1,11 @@
 #一键安装  
 wget -N --no-check-certificate https://raw.githubusercontent.com/nbyhc/Linux_Shell/main/mtpg.sh && chmod +x mtpg.sh && bash mtpg.sh
 
+#禁止Ping,保护端口被扫描到
+sysctl -w net.ipv4.icmp_echo_ignore_all=1
+sysctl -p
+
+
 #输出 MTProxy 代理链接(支持tg、t.me格式链接还有二维码)  
 mtg access /etc/mtg.toml
 
