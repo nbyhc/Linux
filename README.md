@@ -1,9 +1,9 @@
 #一键安装  
 wget -N --no-check-certificate https://raw.githubusercontent.com/nbyhc/Linux_Shell/main/mtpg.sh && chmod +x mtpg.sh && bash mtpg.sh
 
-#禁止Ping,保护端口被扫描到
-sysctl -w net.ipv4.icmp_echo_ignore_all=1
-sysctl -p
+#禁止Ping,保护端口被扫描到  
+sysctl -w net.ipv4.icmp_echo_ignore_all=1  
+sysctl -p  
 
 
 #输出 MTProxy 代理链接(支持tg、t.me格式链接还有二维码)  
@@ -26,13 +26,13 @@ mkdir /home/mtproxy && cd /home/mtproxy
 #【下载程序并配置安装】  
 curl -s -o mtproxy.sh https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh  
 
-#【配置】  
----------------------------
+
+----------【配置】-----------  
 【port：不能与其他程序的端口重复】 = 443  
 【manage port：】 = 8888  
 【伪装域名（说明：自定义TLS伪装域名）】 = azure.microsoft.com  
 【PROXY TAG：默认跳过或输入TAG】 =   
----------------------------
+------------END---------------  
 
 #【进入程序目录】  
 cd /home/mtproxy  
